@@ -1,0 +1,144 @@
+<html>
+
+<head>
+
+<title>Cafebar</title>
+
+</head>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .card {
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .card img {
+      width: 50%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .card img {
+      width: 50%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .card h2 {
+      margin-top: 0;
+    }
+
+    .card p {
+      margin-bottom: 10px;
+    }
+  </style>
+
+<h1>Cafebars</h1><div id="container"></div>
+
+<script>
+  // Data for cafes, cafe bars, and restaurants
+  var places = [
+    {
+      name: "Makau Kitchen and Bar",
+      type: "Cafebar",
+      image: "Makau.jpg",
+      image1:"Makau1.jpg",
+      address: "Jubilee Hills",
+      city: "Hyderabad"
+    },
+    {
+      name: "Airlive",
+      type: "Cafebar",
+      image: "Airlive.jpg",
+      image1: "Airlive1.jpg",
+      address: "Jubilee Hills",
+      city: "Hyderabad"
+    },
+    {
+      name: "Prism Club & Kitchen",
+      type: "Cafebar",
+      image: "Prism.jpg",
+      image1: "Prism1.jpg",
+      address: "Gowlidoddy",
+      city: "Hyderabad"
+    },
+    {
+      name: "The Neighbourhood Bar & Kitchen",
+      type: "Cafebar",
+      image: "Nh.jpg",
+      image1: "Nh1.jpg",
+      address: "Himayatnagar",
+      city: "Hyderabad"
+    },
+    {
+      name: "36 Downtown Brew Pub",
+      type: "Cafebar",
+      image: "36.jpg",
+      image1: "361.jpg",
+      address: "Jubilee Hills",
+      city: "Hyderabad"
+    }
+  ];
+  
+
+  // Create cards for each place
+  var container = document.getElementById("container");
+  places.forEach(function(place) {
+    var card = document.createElement("div");
+    card.className = "card";
+
+    var image = document.createElement("img");
+    image.src = place.image;
+    card.appendChild(image);
+    var image1 = document.createElement("img");
+    image1.src = place.image1;
+    card.appendChild(image1);
+
+
+    var name = document.createElement("h2");
+    name.textContent = place.name;
+    card.appendChild(name);
+
+    var type = document.createElement("p");
+    type.textContent = "Type: " + place.type;
+    card.appendChild(type);
+
+    var address = document.createElement("p");
+    address.textContent = "Address: " + place.address;
+    card.appendChild(address);
+
+    var city = document.createElement("p");
+    city.textContent = "City: " + place.city;
+    card.appendChild(city);
+
+    container.appendChild(card);
+  });
+</script>
+<script>
+    function HomePage() {
+        window.location.href = "index.html";
+    }
+</script>
+</head>
+<body>
+    <button onclick="HomePage()">Go to Home</button>
+</body>
+</body>
+</html>
+
+
+</body>
+
+</html>
